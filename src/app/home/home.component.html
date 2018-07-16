@@ -18,11 +18,14 @@
       <div class="input-group mb-3">
         <input type="text" name="busqueda" class="form-control" placeholder="Buscar usuario, autor o libro" aria-label="Busqueda" aria-describedby="Busqueda" #busqueda (keyup)="buscar(busqueda)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
         <div *ngIf="userSearch || libroSearch || autorSearch " class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item col" href="#" *ngFor="let user of userSearch">{{ user.usuario }} <span  class="badge badge-primary text-right">Usuario</span>
+          <a class="dropdown-item" href="#" *ngFor="let user of userSearch">
+            {{ user.usuario }} <span class="badge badge-pill badge-primary col-sm-4">Usuario</span>
           </a>
-          <a class="dropdown-item" href="#" *ngFor="let libro of libroSearch">{{ libro.nombre }} <span class="badge badge-info">Libro</span>
+          <a class="dropdown-item" href="#" *ngFor="let libro of libroSearch">
+            {{ libro.nombre }} <span class="badge badge-pill badge-info">Libro</span>
           </a>
-          <a class="dropdown-item" href="#" *ngFor="let autor of autorSearch">{{ autor.nombre +" " + autor.apellido }} <span class="badge badge-warning">Autor</span>
+          <a class="dropdown-item" href="#" *ngFor="let autor of autorSearch">
+            {{ autor.nombre +" " + autor.apellido }} <span class="badge badge-pill badge-warning">Autor</span>
           </a>
         </div>
         <div class="input-group-append">
