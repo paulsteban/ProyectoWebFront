@@ -1,16 +1,15 @@
 <div class="container-fluid">
-    <nav class="navbar sticky-top row justify-content-start">
-      <ul class="navbar-nav col-lg-2 text-left">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="usuario">
-            <img [src]="usuario.imagenUrl" class="img-thumbnail img-fluid" [width]="50" [height]="50" alt=""> {{ usuario.usuario }}
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Cerrar sesión</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
+  <nav class="navbar sticky-top row justify-content-start">
+    <ul class="navbar-nav col-lg-12  text-right">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="usuario">
+          <img [src]="usuario.imagenUrl" class="img-thumbnail img-fluid" [width]="50" [height]="50" alt=""> {{ usuario.usuario }}
+          <a class="blanco" href="#">Cerrar Sesión</a>
+        </a>
+
+      </li>
+    </ul>
+  </nav>
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <div class="input-group mb-3">
@@ -27,12 +26,16 @@
           </a>
         </div>
         <div class="input-group-append">
-          <button class="btn btn-primary" (click)="buscar(busqueda)" type="button" id="btn-buscar">Buscar</button>
+          <button class="btn text-right" (click)="buscar(busqueda)" type="button" id="btn-buscar">Buscar</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <app-usuario></app-usuario>
+<hr /><br>
 <app-autor></app-autor>
+<hr /><br>
 <app-libro></app-libro>
+<hr /><br>
+
