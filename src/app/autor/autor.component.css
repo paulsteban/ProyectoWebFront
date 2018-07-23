@@ -1,5 +1,5 @@
 .arrow {
-  background-color: lightgreen;
+  background-color: aqua;
   margin-top: 1em;
 }
 
@@ -10,4 +10,15 @@ app-autor-detail:hover{
 
 .linea {
  // background-image: url("https://es.best-wallpaper.net/wallpaper/m/1312/Colorful-lines-stripes-rays-color-rainbow_m.jpg");
+}
+
+.botoni {
+  background-image: url("flecha-izquierda.png");
+}
+.botond {
+  background-image: url("flecha-derecha.png");
+}
+.pantallad{
+  background-image: url("https://2.bp.blogspot.com/-cFVxsHASQNI/TrxJlBgWJnI/AAAAAAAAAVE/Kk9n6bcENyc/s1600/fondo+azul.jpg");
+
 }

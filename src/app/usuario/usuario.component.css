@@ -2,3 +2,15 @@
   background-color: lightgreen;
   margin-top: 1em;
 }
+
+.botondi {
+  background-image: url("flecha-izquierda.png");
+}
+.botondd {
+  background-image: url("flecha-derecha.png");
+}
+
+.pantalla{
+  background-image: url("https://2.bp.blogspot.com/-cFVxsHASQNI/TrxJlBgWJnI/AAAAAAAAAVE/Kk9n6bcENyc/s1600/fondo+azul.jpg");
+
+}

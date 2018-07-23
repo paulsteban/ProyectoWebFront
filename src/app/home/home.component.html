@@ -1,28 +1,36 @@
-<div class="container-fluid">
-  <nav class="navbar sticky-top row justify-content-start">
-    <ul class="navbar-nav col-lg-12  text-right">
-      <li class="nav-item dropdown">
-        <a class="nav-link " id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="usuario">
-          <img [src]="usuario.imagenUrl" class="img-thumbnail img-fluid" [width]="50" [height]="50" alt=""> {{ usuario.usuario }}
-          <a class="blanco" href="#">Cerrar Sesión</a>
-        </a>
+<body>
+<div class="container-fluid pantallat">
+  <nav class="navbar navbar-toggleable-xl ">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a class="blanco" href="#">Home</a></li>
+        <li class="nav navbar-nav">
+          <a class="nav-link " id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="usuario">
+            <img [src]="usuario.imagenUrl" class="img-thumbnail img-fluid" [width]="50" [height]="50" alt=""> {{ usuario.usuario }}
 
-      </li>
-    </ul>
+          </a>
+
+        </li>
+
+
+        <li> <a class="blanco" href="#"[routerLink]="['/login']">Cerrar Sesión</a></li>
+      </ul>
+
+    </div>
   </nav>
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <div class="input-group mb-3">
-        <input type="text" name="busqueda" class="form-control" placeholder="Buscar usuario, autor o libro" aria-label="Busqueda" aria-describedby="Busqueda" #busqueda (keyup)="buscar(busqueda)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+        <input type="text" name="busqueda" class="form-control" placeholder="Buscar usuario, estudiante, materia" aria-label="Busqueda" aria-describedby="Busqueda" #busqueda (keyup)="buscar(busqueda)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
         <div *ngIf="userSearch || libroSearch || autorSearch " class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#" *ngFor="let user of userSearch">
             {{ user.usuario }} <span class="badge badge-pill badge-primary col-sm-4">Usuario</span>
           </a>
           <a class="dropdown-item" href="#" *ngFor="let libro of libroSearch">
-            {{ libro.nombre }} <span class="badge badge-pill badge-info">Libro</span>
+            {{ libro.nombre }} <span class="badge badge-pill badge-info">Materia</span>
           </a>
           <a class="dropdown-item" href="#" *ngFor="let autor of autorSearch">
-            {{ autor.nombre +" " + autor.apellido }} <span class="badge badge-pill badge-warning">Autor</span>
+            {{ autor.nombre +" " + autor.apellido }} <span class="badge badge-pill badge-warning">Estudiante</span>
           </a>
         </div>
         <div class="input-group-append">
@@ -33,9 +41,9 @@
   </div>
 </div>
 <app-usuario></app-usuario>
-<hr /><br>
+<hr class="navbar" /><br>
 <app-autor></app-autor>
-<hr /><br>
+<hr class="navbar" /><br>
 <app-libro></app-libro>
-<hr /><br>
-
+<hr class="navbar" /><br>
+</body>

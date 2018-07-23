@@ -5,13 +5,15 @@ import {AppComponent} from '../app.component';
 import {LoginComponent} from '../login/login.component';
 import {HomeComponent} from '../home/home.component';
 import {AutorizacionService} from '../autorizacion.service';
+import {PerfilHomeComponent} from "../perfil-home/perfil-home.component";
 
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'home/:id', component: HomeComponent, canActivate: [ AutorizacionService ]}];
+  { path: 'home/:id', component: HomeComponent, canActivate: [ AutorizacionService ]},
+  {path: 'perfil',component:PerfilHomeComponent}];
 
 @NgModule({
   exports: [ RouterModule ],

@@ -1,22 +1,43 @@
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-md-6 text-center">
-      <h1>Login</h1>
-    </div>
+
+<div class="container" >
+  <div class="row">
+    <br><br><br><br>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-md-6 align-self-center">
-      <form #formulario="ngForm" (ngSubmit)="login(formulario)">
+  <div class="row borde" >
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <br class="text-center">
+      <h1 class="h3 mb-3 font-weight-normal text-center">Login</h1>
+      <br>
+      <br>
+      <br><br><br><br>
+      <form class="form-signin" #formulario="ngForm" (ngSubmit)="login(formulario)">
         <div class="form-group">
-          <label for="email">Correo Electrónico</label>
-          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico" ngModel="">
+          <label for="email" class="sr-only">Correo</label>
+          <input type="email"
+                 class="form-control"
+                 id="email"
+                 placeholder="Correo"
+                 name="email"
+                 aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico" ngModel=""
+                 required>
         </div>
+
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Password" ngModel="">
+          <label for="password" class="sr-only">Password</label>
+          <input type="password"
+                 class="form-control"
+                 id="password"
+                 placeholder="Password"
+                 name="password"
+                 name="password" placeholder="Password" ngModel=""
+                 required>
         </div>
-        <button type="submit" class="btn btn-primary" >Ingresar</button>
+        <br><br><br><br>
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Ingresar</button>
       </form>
+      <br>
     </div>
+    <div class="col-sm-4"></div>
   </div>
 </div>

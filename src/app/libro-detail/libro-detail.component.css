@@ -5,3 +5,6 @@ button {
 .nombreLibro {
   font-weight: bold;
 }
+.bordeLibro {
+  border-style: groove;
+}

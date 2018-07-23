@@ -1,6 +1,7 @@
 .navbar{
   background: #000011;
   color: white;
+nav-index: revert;
 }
 .sticky-top{
   margin-bottom: 1em;
@@ -8,4 +9,9 @@
 
 .blanco{
   color: white;
+}
+
+.pantallat{
+  background-image: url("https://2.bp.blogspot.com/-cFVxsHASQNI/TrxJlBgWJnI/AAAAAAAAAVE/Kk9n6bcENyc/s1600/fondo+azul.jpg");
+
 }

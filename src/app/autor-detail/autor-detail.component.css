@@ -5,3 +5,6 @@ button {
 .nombreAutor {
   font-weight: bold;
 }
+.bordeAutor {
+  border-style: groove;
+}
